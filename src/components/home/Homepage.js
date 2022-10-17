@@ -24,7 +24,8 @@ export default function Homepage(){
                     Authorization: `Bearer ${localStorage.getItem("token")}`
                 }
             })
-            setUrl("")             
+            setUrl("")
+            buscaUrls()            
         } catch (error) {
             console.log(error)
         }
@@ -50,7 +51,8 @@ export default function Homepage(){
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`
                 }
-            })             
+            })
+            buscaUrls()          
         } catch (error) {
             console.log(error)
         }
@@ -58,7 +60,7 @@ export default function Homepage(){
 
     useEffect(()=> {
         buscaUrls()
-    }, [encurtador])
+    }, [])
 
     return (
         <>
