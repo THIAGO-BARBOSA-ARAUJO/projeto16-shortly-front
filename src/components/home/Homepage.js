@@ -60,7 +60,6 @@ export default function Homepage(){
         buscaUrls()
     }, [encurtador])
 
-
     return (
         <>
             <Header/>
@@ -73,7 +72,7 @@ export default function Homepage(){
                             <input required type="text" id="campoLink" placeholder="Links que cabem no bolso" value={link} onChange={e => setLink(e.target.value)} /><br/>
                             <button onClick={() => encurtador()}>Encurtar link</button>
                         </div>
-                        {urls.length > 0 
+                        {urls.length > 0
                         ?  <div className="clas">{
                                 urls.map((url) => (
                                     <div className="links">
